@@ -73,6 +73,36 @@
         font-size: 30px;
         font-weight: 700;
       }
+      /* animation */
+      h6 {
+        animation: example infinite 4s;
+      }
+
+      @keyframes example {
+        0% {
+          color: red;
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          color: yellow;
+        }
+        50% {
+          color: blue;
+          left: 200px;
+          top: 200px;
+        }
+        75% {
+          color: green;
+          left: 0px;
+          top: 200px;
+        }
+        100% {
+          color: red;
+          left: 0px;
+          top: 0px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -174,13 +204,13 @@
         class="banner h-96 lg:h-[800px] pl-3 lg:pl-0 lg:py-12 bg-[url('https://i.ibb.co/BH77xG6z/cat-big.png')] bg-no-repeat bg-cover bg-right lg:bg-bottom"
       >
         <div class="space-y-2 lg:space-y-4">
-          <h2
+          <h6
             class="text-3xl lg:text-5xl leading-10 lg:leading-[60px] w-680px font-adlam font-bold"
           >
             Pamper Your Pet,<br />
             Because They Deserve <br />
             the Bes
-          </h2>
+          </h6>
           <p
             class="text-base lg:text-xl text-gray-400 font-normal sora-font w-4/6 lg:w-[670px]"
           >
@@ -528,7 +558,7 @@
         <div class="lg:p-0 p-5">
           <h2 class="section-title">Everyday low Price</h2>
 
-          <div class="lg:flex gap-5 mt-12">
+          <div class="lg:flex grid grid-cols-1 gap-5 lg:gap-5 mt-12">
             <!-- price-card-left -->
             <div
               class="rounded-xl lg:w-4/6 flex items-center bg-gradient-to-r from-[#f8ccfb] to-[#acd2fd]"
@@ -577,6 +607,75 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="bg-yellow-200 p-5 lg:p-0 mt-72">
+      <!-- footer-top -->
+      <section
+        class="footer-top container mx-auto relative -top-52 rounded-xl bg-white shadow-2xl py-5"
+      >
+        <div
+          class="lg:flex grid grid-cols-1 text-center lg:text-start justify-around items-center rounded-xxl"
+        >
+          <div class="flex lg:justify-start justify-center">
+            <img class="w-[300px]" src="./c1-assets/cute-pet-mid.png" alt="" />
+          </div>
+          <div class="space-y-4 w-full lg:w-3/6">
+            <h2 class="section-title font-bold">Get Awesome News!</h2>
+            <p class="text-gray-600">
+              Exclusive training tips, ticks, product deals and more.
+            </p>
+            <div>
+              <input
+                type="text"
+                placeholder="Enter Gmail"
+                class="input input-bordered w-5/6 lg:w-3/6"
+              />
+            </div>
+            <div>
+              <button class="btn w-32 bg-yellow-400">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="-mt-32 lg:mt-0 lg:flex grid grid-cols-1 items-center justify-between container mx-auto lg:space-y-0 space-y-5 p-5 lg:p-0"
+      >
+        <aside>
+          <div class="flex items-center">
+            <img class="w-[80px]" src="./c1-assets/logo-footer.png" alt="" />
+            <a class="btn btn-ghost text-[26px]"
+              ><span>Browse<span class="text-yellow-400">4</span>Pets</span></a
+            >
+          </div>
+
+          <p class="w-52 text-gray-600">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends
+          </p>
+        </aside>
+        <nav class="flex flex-col space-y-4 text-gray-600 font-bold">
+          <a class="link link-hover">Find a pet</a>
+          <a class="link link-hover">Breeds</a>
+          <a class="link link-hover">Contact us</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Follow Us</h6>
+          <div class="flex gap-5 lg:gap-8">
+            <a>
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a>
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a>
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a>
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </nav>
+      </section>
+    </footer>
   </body>
 </html>
